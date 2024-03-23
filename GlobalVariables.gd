@@ -1,3 +1,3 @@
 extends Node
 
-var money = 23255
+var money = 23256
