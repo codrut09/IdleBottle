@@ -1,0 +1,162 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjiih3v5v7gf7"]
+
+[ext_resource type="Script" path="res://Main/Main.gd" id="1_e43h2"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e43h2")
+
+[node name="Bottle Type" type="MenuButton" parent="."]
+layout_mode = 0
+offset_left = 816.0
+offset_top = 223.0
+offset_right = 932.0
+offset_bottom = 263.0
+text = "Bottle Type"
+item_count = 5
+popup/item_0/text = "Bottle330"
+popup/item_0/id = 0
+popup/item_1/text = "Bottle500"
+popup/item_1/id = 1
+popup/item_2/text = "Bottle1000"
+popup/item_2/id = 2
+popup/item_3/text = "Bottle1500"
+popup/item_3/id = 3
+popup/item_4/text = "Bottle2000"
+popup/item_4/id = 4
+
+[node name="Store" type="Button" parent="."]
+layout_mode = 0
+offset_left = 915.0
+offset_top = 6.0
+offset_right = 964.0
+offset_bottom = 37.0
+text = "Store"
+
+[node name="Sell" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1013.0
+offset_top = 127.0
+offset_right = 1073.0
+offset_bottom = 158.0
+text = "Sell
+"
+
+[node name="TapWatter" type="Button" parent="."]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 147.0
+offset_right = 285.0
+offset_bottom = 178.0
+text = "Water"
+
+[node name="TapWaterIdle" type="Button" parent="."]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 243.0
+offset_right = 166.0
+offset_bottom = 282.0
+text = "Water Idle"
+
+[node name="UppTapWater" type="Button" parent="."]
+layout_mode = 0
+offset_left = 315.0
+offset_top = 148.0
+offset_right = 377.0
+offset_bottom = 179.0
+text = "Upp x1
+"
+
+[node name="UppTapWaterX10" type="Button" parent="."]
+layout_mode = 0
+offset_left = 395.0
+offset_top = 148.0
+offset_right = 467.0
+offset_bottom = 179.0
+text = "Upp x10"
+
+[node name="UppTapWaterIdle" type="Button" parent="."]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 248.0
+offset_right = 276.0
+offset_bottom = 279.0
+text = "Upp x1"
+
+[node name="UppTapWaterIdleX10" type="Button" parent="."]
+layout_mode = 1
+offset_left = 295.0
+offset_top = 248.0
+offset_right = 367.0
+offset_bottom = 279.0
+text = "Upp x10"
+
+[node name="Money" type="Label" parent="."]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 14.0
+offset_right = 190.0
+offset_bottom = 51.0
+text = "(Money)"
+
+[node name="InventoryBottle330" type="Label" parent="."]
+layout_mode = 0
+offset_left = 812.0
+offset_top = 131.0
+offset_right = 971.0
+offset_bottom = 154.0
+text = "(InventoryBottle330)"
+
+[node name="CounterBottle330" type="Label" parent="."]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 604.0
+offset_right = 178.0
+offset_bottom = 627.0
+text = "CounterrBottle330"
+
+[node name="LabelBottle330" type="Label" parent="."]
+layout_mode = 0
+offset_left = 206.0
+offset_top = 108.0
+offset_right = 291.0
+offset_bottom = 131.0
+text = "(Bottle330)"
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="UppTapWater_lvl" type="Label" parent="."]
+layout_mode = 0
+offset_left = 318.0
+offset_top = 107.0
+offset_right = 460.0
+offset_bottom = 130.0
+text = "(UppTapWater_lvl)"
+
+[node name="UppTapWaterIdle_lvl" type="Label" parent="."]
+layout_mode = 0
+offset_left = 207.0
+offset_top = 217.0
+offset_right = 378.0
+offset_bottom = 247.0
+text = "(UppTapWaterIdle_lvl)"
+
+[connection signal="pressed" from="Bottle Type" to="." method="_on_bottle_type_pressed"]
+[connection signal="pressed" from="Store" to="." method="_on_store_pressed"]
+[connection signal="pressed" from="Sell" to="." method="_on_sell_pressed"]
+[connection signal="pressed" from="TapWatter" to="." method="_on_tap_watter_pressed"]
+[connection signal="pressed" from="TapWaterIdle" to="." method="_on_tap_water_idle_pressed"]
+[connection signal="pressed" from="UppTapWater" to="." method="_on_upp_tap_water_pressed"]
+[connection signal="pressed" from="UppTapWaterX10" to="." method="_on_upp_tap_water_x_10_pressed"]
+[connection signal="pressed" from="UppTapWaterIdle" to="." method="_on_upp_tap_water_idle_pressed"]
+[connection signal="pressed" from="UppTapWaterIdleX10" to="." method="_on_upp_tap_water_idle_x_10_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
