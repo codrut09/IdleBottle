@@ -175,27 +175,6 @@ offset_top = 14.0
 offset_right = 364.0
 offset_bottom = 37.0
 
-[node name="FirstAchievement" type="Label" parent="AchievementsPanel"]
-visible = false
-modulate = Color(1, 0.0745098, 1, 1)
-self_modulate = Color(1, 0.0745098, 1, 1)
-layout_mode = 0
-offset_left = 24.0
-offset_top = 65.0
-offset_right = 571.0
-offset_bottom = 158.0
-text = "First 10 x 330 bottles."
-
-[node name="SecondAchievement" type="Label" parent="AchievementsPanel"]
-visible = false
-modulate = Color(1, 0.0745098, 1, 1)
-self_modulate = Color(1, 0.054902, 1, 1)
-offset_left = 25.0
-offset_top = 167.0
-offset_right = 572.0
-offset_bottom = 260.0
-text = "First 100 x 330 bottles."
-
 [node name="AchievementsButton" type="Button" parent="."]
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 0

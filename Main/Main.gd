@@ -3,18 +3,20 @@ extends Control
 var Bottle330 = 0
 var CounterBottle330 = 0
 var InventoryBottle330 = 0
+var TotalBottle330 = 0
 var TapWaterUpp = false
 var TapWaterUppLvl = 1
 var TapWaterIdleUppLvl = 1
 var Money = GlobalVariables.money
 
-
 func _ready():
 	$LabelBottle330.text = str(Bottle330)
 	$InventoryBottle330.text = str(InventoryBottle330)
+	$AchievementsPanel/TotalBottle330Label.text = "Total number of 330 bottles: " + str(TotalBottle330)
 	$Money.text = "$" + str(Money)
 	$UppTapWater_lvl.text = str(TapWaterUppLvl)
 	$UppTapWaterIdle_lvl.text = str(TapWaterIdleUppLvl)
+	$AchievementsPanel.visible = false
 
 
 func _on_tap_watter_pressed():
@@ -24,12 +26,14 @@ func _on_tap_watter_pressed():
 		var bottles_filled = int(total_water / 330)
 		var overflow = total_water % 330
 		InventoryBottle330 += bottles_filled
+		TotalBottle330 += bottles_filled
 		Bottle330 = overflow
 		$LabelBottle330.text = "0/330"
 	else:
 		Bottle330 = total_water
 	$LabelBottle330.text = str(Bottle330) + "/330"
 	$InventoryBottle330.text = str(InventoryBottle330)
+	$AchievementsPanel/TotalBottle330Label.text = "Total number of 330 bottles: " + str(TotalBottle330)
 
 
 func _on_sell_pressed():
@@ -114,3 +118,12 @@ func _on_bottle_type_pressed():
 
 func _on_button_pressed():
 	pass # Replace with function body.
+
+
+func _on_achievements_button_pressed():
+	$AchievementsPanel.visible = not $AchievementsPanel.visible
+	if TotalBottle330 >= 10:
+		$AchievementsPanel/FirstAchievement.visible = true;
+	if TotalBottle330 >= 100:
+		$AchievementsPanel/SecondAchievement.visible = true;
+
