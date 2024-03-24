@@ -1,8 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjiih3v5v7gf7"]
+[gd_scene load_steps=2 format=3 uid="uid://cjiih3v5v7gf7"]
 
 [ext_resource type="Script" path="res://Main/Main.gd" id="1_e43h2"]
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_k155s"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -154,9 +152,6 @@ offset_bottom = 247.0
 text = "(UppTapWaterIdle_lvl)"
 
 [node name="AchievementsPanel" type="Panel" parent="."]
-modulate = Color(0.454902, 0.447059, 0.12549, 1)
-self_modulate = Color(0.615686, 0.443137, 0.239216, 1)
-material = SubResource("CanvasItemMaterial_k155s")
 layout_mode = 1
 anchors_preset = 11
 anchor_left = 1.0
@@ -167,34 +162,6 @@ offset_top = 53.0
 offset_right = -3.0
 grow_horizontal = 0
 grow_vertical = 2
-
-[node name="TotalBottle330Label" type="Label" parent="AchievementsPanel"]
-layout_mode = 0
-offset_left = 18.0
-offset_top = 14.0
-offset_right = 364.0
-offset_bottom = 37.0
-
-[node name="FirstAchievement" type="Label" parent="AchievementsPanel"]
-visible = false
-modulate = Color(1, 0.0745098, 1, 1)
-self_modulate = Color(1, 0.0745098, 1, 1)
-layout_mode = 0
-offset_left = 24.0
-offset_top = 65.0
-offset_right = 571.0
-offset_bottom = 158.0
-text = "First 10 x 330 bottles."
-
-[node name="SecondAchievement" type="Label" parent="AchievementsPanel"]
-visible = false
-modulate = Color(1, 0.0745098, 1, 1)
-self_modulate = Color(1, 0.054902, 1, 1)
-offset_left = 25.0
-offset_top = 167.0
-offset_right = 572.0
-offset_bottom = 260.0
-text = "First 100 x 330 bottles."
 
 [node name="AchievementsButton" type="Button" parent="."]
 custom_minimum_size = Vector2(120, 0)
