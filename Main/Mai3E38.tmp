@@ -140,7 +140,7 @@ offset_right = 378.0
 offset_bottom = 247.0
 text = "(UppTapWaterIdle_lvl)"
 
-[connection signal="item_selected" from="TestOption" to="." method="_on_test_option_item_selected"]
+[connection signal="item_selected" from="TestOption" to="." method="_on_item_selected"]
 [connection signal="pressed" from="Store" to="." method="_on_store_pressed"]
 [connection signal="pressed" from="Sell" to="." method="_on_sell_pressed"]
 [connection signal="pressed" from="TapWatter" to="." method="_on_tap_watter_pressed"]

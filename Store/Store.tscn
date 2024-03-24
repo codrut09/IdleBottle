@@ -92,4 +92,7 @@ offset_bottom = 38.0
 text = "Money"
 
 [connection signal="pressed" from="BuyBottle500" to="." method="_on_buy_bottle_500_pressed"]
+[connection signal="pressed" from="BuyBottle1000" to="." method="_on_buy_bottle_1000_pressed"]
+[connection signal="pressed" from="BuyBottle1500" to="." method="_on_buy_bottle_1500_pressed"]
+[connection signal="pressed" from="BuyBottle2000" to="." method="_on_buy_bottle_2000_pressed"]
 [connection signal="pressed" from="Main" to="." method="_on_main_pressed"]
